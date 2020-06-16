@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobx_example/mobx/form_screen/form_screen.dart';
 import 'package:mobx_example/mobx/main_screen/main_screen.dart';
+import 'package:mobx_example/mobx/product_list_screen/product_list_screen.dart';
 import 'package:mobx_example/mobx/profile_screen/profile_screen.dart';
 
 import 'mobx/form_screen/customer_controller.dart';
@@ -39,7 +40,8 @@ class MyApp extends StatelessWidget {
       // home: MainScreen(),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
       // home: ProfileScreen(),
-      home: FormScreen(),
+      // home: FormScreen(),
+      home: ProductListScreen(),
     );
   }
 }
