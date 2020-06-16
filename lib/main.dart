@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_bible/mobx/main_screen.dart';
+import 'package:quiz_bible/mobx/main_screen/main_screen.dart';
 // import 'package:quiz_bible/mobx/main_screen.dart';
 
 void main() {
