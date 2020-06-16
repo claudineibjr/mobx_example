@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:quiz_bible/mobx/main_controller.dart';
+import 'package:quiz_bible/mobx/controller.dart';
 
 class MainScreen extends StatelessWidget {
-  final MainController controller = MainController();
+  final Controller controller = Controller();
 
   @override
   Widget build(BuildContext context) {
