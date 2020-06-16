@@ -1,4 +1,4 @@
-package com.example.quiz_bible
+package com.example.mobx_example
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_bible/mobx/form_screen/form_screen.dart';
-import 'package:quiz_bible/mobx/main_screen/main_screen.dart';
-import 'package:quiz_bible/mobx/profile_screen/profile_screen.dart';
-// import 'package:quiz_bible/mobx/main_screen.dart';
+import 'package:mobx_example/mobx/form_screen/form_screen.dart';
+import 'package:mobx_example/mobx/main_screen/main_screen.dart';
+import 'package:mobx_example/mobx/profile_screen/profile_screen.dart';
+// import 'package:mobx_example/mobx/main_screen.dart';
 
 void main() {
   runApp(MyApp());

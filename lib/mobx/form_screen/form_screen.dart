@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:quiz_bible/mobx/form_screen/customer_controller.dart';
+import 'package:mobx_example/mobx/form_screen/customer_controller.dart';
 
 class FormScreen extends StatelessWidget {
   final CustomerController _controller = CustomerController();

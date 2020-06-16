@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:quiz_bible/mobx/main_screen/controller/controller.dart';
+import 'package:mobx_example/mobx/main_screen/controller/controller.dart';
 
 class MainScreen extends StatelessWidget {
   final Controller controller = Controller();

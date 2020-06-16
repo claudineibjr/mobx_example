@@ -1,4 +1,4 @@
-# quiz_bible
+# mobx_example
 
 A new Flutter project.
 

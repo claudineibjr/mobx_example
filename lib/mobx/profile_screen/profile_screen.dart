@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:quiz_bible/mobx/profile_screen/profile_controller.dart';
+import 'package:mobx_example/mobx/profile_screen/profile_controller.dart';
 
 class ProfileScreen extends StatelessWidget {
   final ProfileController controller = ProfileController();
