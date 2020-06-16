@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:get_it/get_it.dart';
 import 'package:mobx_example/mobx/form_screen/customer_controller.dart';
-import 'package:provider/provider.dart';
 
 class FormScreen extends StatelessWidget {
+  final CustomerController _controller = GetIt.I.get<CustomerController>();
+  
   Widget _textField({
     String labelText,
     Function onChanged,
@@ -21,9 +23,6 @@ class FormScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final CustomerController _controller =
-        Provider.of<CustomerController>(context);
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Formulário'),
