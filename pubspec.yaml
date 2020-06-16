@@ -18,7 +18,7 @@ dependencies:
 
 dev_dependencies:
   mobx_codegen:
-  build_runner: # flutter pub run build_runner build
+  build_runner: # flutter pub run build_runner build --- flutter pub run build_runner watch
   flutter_test:
     sdk: flutter
 

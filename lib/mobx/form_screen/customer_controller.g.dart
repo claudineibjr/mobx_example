@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'profile_controller.dart';
+part of 'customer_controller.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,13 +8,13 @@ part of 'profile_controller.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$ProfileController on _ControllerBase, Store {
-  Computed<String> _$fullNameComputed;
+mixin _$CustomerController on _ControllerBase, Store {
+  Computed<bool> _$canContinueComputed;
 
   @override
-  String get fullName =>
-      (_$fullNameComputed ??= Computed<String>(() => super.fullName,
-              name: '_ControllerBase.fullName'))
+  bool get canContinue =>
+      (_$canContinueComputed ??= Computed<bool>(() => super.canContinue,
+              name: '_ControllerBase.canContinue'))
           .value;
 
   final _$nameAtom = Atom(name: '_ControllerBase.name');
@@ -32,18 +32,18 @@ mixin _$ProfileController on _ControllerBase, Store {
     });
   }
 
-  final _$surnameAtom = Atom(name: '_ControllerBase.surname');
+  final _$emailAtom = Atom(name: '_ControllerBase.email');
 
   @override
-  String get surname {
-    _$surnameAtom.reportRead();
-    return super.surname;
+  String get email {
+    _$emailAtom.reportRead();
+    return super.email;
   }
 
   @override
-  set surname(String value) {
-    _$surnameAtom.reportWrite(value, super.surname, () {
-      super.surname = value;
+  set email(String value) {
+    _$emailAtom.reportWrite(value, super.email, () {
+      super.email = value;
     });
   }
 
@@ -62,11 +62,11 @@ mixin _$ProfileController on _ControllerBase, Store {
   }
 
   @override
-  dynamic changeSurname(String newSurname) {
+  dynamic changeEmail(String newEmail) {
     final _$actionInfo = _$_ControllerBaseActionController.startAction(
-        name: '_ControllerBase.changeSurname');
+        name: '_ControllerBase.changeEmail');
     try {
-      return super.changeSurname(newSurname);
+      return super.changeEmail(newEmail);
     } finally {
       _$_ControllerBaseActionController.endAction(_$actionInfo);
     }
@@ -76,8 +76,8 @@ mixin _$ProfileController on _ControllerBase, Store {
   String toString() {
     return '''
 name: ${name},
-surname: ${surname},
-fullName: ${fullName}
+email: ${email},
+canContinue: ${canContinue}
     ''';
   }
 }

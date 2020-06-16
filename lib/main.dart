@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_bible/mobx/form_screen/form_screen.dart';
 import 'package:quiz_bible/mobx/main_screen/main_screen.dart';
 import 'package:quiz_bible/mobx/profile_screen/profile_screen.dart';
 // import 'package:quiz_bible/mobx/main_screen.dart';
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: MainScreen(),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
-      home: ProfileScreen(),
+      // home: ProfileScreen(),
+      home: FormScreen(),
     );
   }
 }
