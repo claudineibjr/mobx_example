@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobx_example/mobx/form_screen/form_screen.dart';
 import 'package:mobx_example/mobx/main_screen/main_screen.dart';
+import 'package:mobx_example/mobx/product_list_screen/product_list_controller.dart';
 import 'package:mobx_example/mobx/product_list_screen/product_list_screen.dart';
 import 'package:mobx_example/mobx/profile_screen/profile_screen.dart';
 
@@ -11,6 +12,8 @@ import 'mobx/form_screen/customer_controller.dart';
 void main() {
   GetIt getIt = GetIt.I;
   getIt.registerLazySingleton<CustomerController>(() => CustomerController());
+  getIt.registerLazySingleton<ProductListController>(
+      () => ProductListController());
 
   runApp(MyApp());
 }
