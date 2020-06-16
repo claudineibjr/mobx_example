@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_bible/mobx/main_screen.dart';
 // import 'package:quiz_bible/mobx/main_screen.dart';
 
 void main() {
@@ -27,8 +28,8 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      // home: MainScreen(),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MainScreen(),
+      // home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
