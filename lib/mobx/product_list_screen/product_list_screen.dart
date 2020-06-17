@@ -81,7 +81,8 @@ class ProductListScreen extends StatelessWidget {
           Observer(
             builder: (_) {
               return IconButton(
-                icon: Text(_controller.allChecked.toString()),
+                icon: Text(
+                    '${_controller.countAllChecked.toString()} / ${_controller.countAll.toString()}'),
                 onPressed: () {},
               );
             },

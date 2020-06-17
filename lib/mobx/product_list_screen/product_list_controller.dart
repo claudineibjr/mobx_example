@@ -33,7 +33,10 @@ abstract class _ProductListControllerBase with Store {
   }
 
   @computed
-  int get allChecked => items.where((element) => element.checked).length;
+  int get countAll => items.length;
+
+  @computed
+  int get countAllChecked => items.where((element) => element.checked).length;
 
   @action
   addItem(ProductItem product) {

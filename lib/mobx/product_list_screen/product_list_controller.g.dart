@@ -16,12 +16,19 @@ mixin _$ProductListController on _ProductListControllerBase, Store {
           Computed<List<ProductItem>>(() => super.listFiltered,
               name: '_ProductListControllerBase.listFiltered'))
       .value;
-  Computed<int> _$allCheckedComputed;
+  Computed<int> _$countAllComputed;
 
   @override
-  int get allChecked =>
-      (_$allCheckedComputed ??= Computed<int>(() => super.allChecked,
-              name: '_ProductListControllerBase.allChecked'))
+  int get countAll =>
+      (_$countAllComputed ??= Computed<int>(() => super.countAll,
+              name: '_ProductListControllerBase.countAll'))
+          .value;
+  Computed<int> _$countAllCheckedComputed;
+
+  @override
+  int get countAllChecked =>
+      (_$countAllCheckedComputed ??= Computed<int>(() => super.countAllChecked,
+              name: '_ProductListControllerBase.countAllChecked'))
           .value;
 
   final _$itemsAtom = Atom(name: '_ProductListControllerBase.items');
@@ -96,7 +103,8 @@ mixin _$ProductListController on _ProductListControllerBase, Store {
 items: ${items},
 filter: ${filter},
 listFiltered: ${listFiltered},
-allChecked: ${allChecked}
+countAll: ${countAll},
+countAllChecked: ${countAllChecked}
     ''';
   }
 }
