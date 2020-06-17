@@ -9,6 +9,13 @@ part of 'product_list_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$ProductListController on _ProductListControllerBase, Store {
+  Computed<List<ProductItem>> _$listFilteredComputed;
+
+  @override
+  List<ProductItem> get listFiltered => (_$listFilteredComputed ??=
+          Computed<List<ProductItem>>(() => super.listFiltered,
+              name: '_ProductListControllerBase.listFiltered'))
+      .value;
   Computed<int> _$allCheckedComputed;
 
   @override
@@ -32,8 +39,34 @@ mixin _$ProductListController on _ProductListControllerBase, Store {
     });
   }
 
+  final _$filterAtom = Atom(name: '_ProductListControllerBase.filter');
+
+  @override
+  String get filter {
+    _$filterAtom.reportRead();
+    return super.filter;
+  }
+
+  @override
+  set filter(String value) {
+    _$filterAtom.reportWrite(value, super.filter, () {
+      super.filter = value;
+    });
+  }
+
   final _$_ProductListControllerBaseActionController =
       ActionController(name: '_ProductListControllerBase');
+
+  @override
+  dynamic setFilter(String value) {
+    final _$actionInfo = _$_ProductListControllerBaseActionController
+        .startAction(name: '_ProductListControllerBase.setFilter');
+    try {
+      return super.setFilter(value);
+    } finally {
+      _$_ProductListControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
 
   @override
   dynamic addItem(ProductItem product) {
@@ -61,6 +94,8 @@ mixin _$ProductListController on _ProductListControllerBase, Store {
   String toString() {
     return '''
 items: ${items},
+filter: ${filter},
+listFiltered: ${listFiltered},
 allChecked: ${allChecked}
     ''';
   }

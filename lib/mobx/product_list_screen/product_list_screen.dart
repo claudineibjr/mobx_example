@@ -66,6 +66,7 @@ class ProductListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: TextField(
+          onChanged: _controller.setFilter,
           decoration: InputDecoration(
             hintText: 'Pesquisa...',
             hintStyle: TextStyle(
@@ -91,9 +92,9 @@ class ProductListScreen extends StatelessWidget {
         child: Observer(
           builder: (_) {
             return ListView.builder(
-              itemCount: _controller.items.length,
+              itemCount: _controller.listFiltered.length,
               itemBuilder: (_, index) {
-                ProductItem product = _controller.items[index];
+                ProductItem product = _controller.listFiltered[index];
 
                 return ProductWidget(
                   productItem: product,

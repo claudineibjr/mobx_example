@@ -14,6 +14,24 @@ abstract class _ProductListControllerBase with Store {
     ProductItem(checked: false, title: 'Samsung Galaxy A30S'),
   ].asObservable();
 
+  @observable
+  String filter = '';
+
+  @action
+  setFilter(String value) => filter = value;
+
+  @computed
+  List<ProductItem> get listFiltered {
+    if (filter.isEmpty) {
+      return items;
+    } else {
+      return items
+          .where(
+              (item) => item.title.toLowerCase().contains(filter.toLowerCase()))
+          .toList();
+    }
+  }
+
   @computed
   int get allChecked => items.where((element) => element.checked).length;
 
