@@ -5,7 +5,7 @@ import 'package:mobx_example/mobx/form_screen/customer_controller.dart';
 
 class FormScreen extends StatelessWidget {
   final CustomerController _controller = GetIt.I.get<CustomerController>();
-  
+
   Widget _textField({
     String labelText,
     Function onChanged,
@@ -35,6 +35,7 @@ class FormScreen extends StatelessWidget {
               children: <Widget>[
                 Observer(
                   builder: (_) {
+                    print('Nome');
                     return _textField(
                       labelText: 'Nome',
                       onChanged: _controller.changeName,
@@ -45,6 +46,7 @@ class FormScreen extends StatelessWidget {
                 SizedBox(height: 15),
                 Observer(
                   builder: (_) {
+                    print('E-mail');
                     return _textField(
                       labelText: 'E-mail',
                       onChanged: _controller.changeEmail,

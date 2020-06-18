@@ -16,6 +16,7 @@ dependencies:
   mobx: 
   flutter_mobx: 
   get_it: 
+  http: 
 
 dev_dependencies:
   mobx_codegen:
